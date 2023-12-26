@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style=" display: flex;justify-content: center;align-items: center;">
+                <img src="{% static 'image/art3.png'%}" class="w-50 h-50" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured products -->
+    <div class="container my-5">
+        <h3 class="text-center mb-4">Featured Products</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'image/book1.jpg'%}" height="200" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Books and notes</h5>
+                        <p class="card-text">All products including books ,notebooks ,lab records, notepads are available.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'image/files.jpg'%}" height="200" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Files</h5>
+                        <p class="card-text">vibrant collection of file holders and exame boards are ready for sale.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'image/pencile.jpg'%}" height="200" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Other stationaries</h5>
+                        <p class="card-text">All other stationaries including pen, penciles,colours you can buy.</p>
+<!--
+                        <a href="#" class="btn btn-primary">Buy Now</a>
+-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Newsletter sign up-->
+    <div class="container bg-light bg-gradient mb-10 my-5 text-center py-5">
+        <a type="button" class="btn btn-primary" href="{% url 'homeapp:shope' %}">Purchase here</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+{% endblock %}
